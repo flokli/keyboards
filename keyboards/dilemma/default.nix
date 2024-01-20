@@ -23,7 +23,6 @@ rec {
 
     buildPhase = ''
       mkdir -p keyboards/bastardkb/dilemma/3x5_3/keymaps/flokli
-      cp ${./config.h} keyboards/bastardkb/dilemma/3x5_3/keymaps/flokli/config.h
       cp ${./keymap.c} keyboards/bastardkb/dilemma/3x5_3/keymaps/flokli/keymap.c
       cp ${./rules.mk} keyboards/bastardkb/dilemma/3x5_3/keymaps/flokli/rules.mk
 
