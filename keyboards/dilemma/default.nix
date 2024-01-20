@@ -22,17 +22,22 @@ rec {
     ];
 
     buildPhase = ''
-      make bastardkb/dilemma/3x5_3:via
+      mkdir -p keyboards/bastardkb/dilemma/3x5_3/keymaps/flokli
+      cp ${./config.h} keyboards/bastardkb/dilemma/3x5_3/keymaps/flokli/config.h
+      cp ${./keymap.c} keyboards/bastardkb/dilemma/3x5_3/keymaps/flokli/keymap.c
+      cp ${./rules.mk} keyboards/bastardkb/dilemma/3x5_3/keymaps/flokli/rules.mk
+
+      make bastardkb/dilemma/3x5_3:flokli
     '';
 
     installPhase = ''
       mkdir -p $out
-      cp bastardkb_dilemma_3x5_3_via.uf2 $out/
+      cp bastardkb_dilemma_3x5_3_flokli.uf2 $out/
     '';
   };
 
   flash = pkgs.writeShellScript "flash.sh" ''
-    ${pkgs.qmk}/bin/qmk flash ${firmware}/bastardkb_dilemma_3x5_3_via.uf2
+    ${pkgs.qmk}/bin/qmk flash ${firmware}/bastardkb_dilemma_3x5_3_flokli.uf2
   '';
 
   meta.ci.targets = [ "firmware" ];
