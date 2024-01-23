@@ -12,6 +12,8 @@ rec {
       fetchSubmodules = true;
     };
 
+    patches = [ ./enable-taps.patch ];
+
     postPatch = ''
       patchShebangs util/uf2conv.py
     '';
