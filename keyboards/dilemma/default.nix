@@ -5,10 +5,10 @@ rec {
     name = "keychron-bastardkb-dilemma-firmware";
 
     src = pkgs.fetchFromGitHub {
-      owner = "Bastardkb"; # the bastadrkb fork of qmk/qmk_firmware
-      repo = "bastardkb-qmk";
-      rev = "78b6376b073c174dee482ae3ebe4fdc572874a09"; # bkb-master
-      hash = "sha256-30TqwEsLNs5Rli+RMQQMOg8AIufIZvhbetbdz9C4k/8=";
+      owner = "qmk";
+      repo = "qmk_firmware";
+      rev = "728aa576b0cd65c6fb7cf77132fdcd06fcedb643"; # develop branch
+      hash = "sha256-YmdX8nEsB1R8d265HAmvwejPjEHJdoTnm4QNigzrcyw=";
       fetchSubmodules = true;
     };
 
