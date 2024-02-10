@@ -45,7 +45,7 @@ enum dilemma_keymap_layers {
 #endif // !POINTING_DEVICE_ENABLE
 
 // clang-format off
-/** \brief QWERTY layout (3 rows, 10 columns). */
+/** \brief COLEMAK-DH layout (3 rows, 10 columns). */
 #define LAYOUT_LAYER_BASE                                                                     \
        KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,    KC_J,    KC_L,    KC_U,    KC_Y, KC_QUOT, \
        KC_A,    KC_R,    KC_S,    KC_T,    KC_G,    KC_M,    KC_N,    KC_E,    KC_I,    KC_O, \
@@ -70,7 +70,7 @@ enum dilemma_keymap_layers {
 /**
  * \brief Navigation layer.
  *
- * Primary right-hand layer (left home thumb) is navigation and editing. Cursor
+ * Primary left-hand layer (left home thumb) is navigation and editing. Cursor
  * keys are on the home position, line and page movement below, clipboard
  * above, caps lock and insert on the inner column. Thumb keys are duplicated
  * from the base layer to avoid having to layer change mid edit and to enable
@@ -85,7 +85,7 @@ enum dilemma_keymap_layers {
 /**
  * \brief Mouse layer
  *
- * Secondary right-hand layer is mouse emulation. Mouse movement mirrors cursor
+ * Secondary left-hand layer is mouse emulation. Mouse movement mirrors cursor
  * navigation on home and wheel mirrors line / page movement below. Mouse
  * buttons are on the thumbs. Left, right, and middle mouse buttons are on the
  * primary, secondary, and tertiary thumb keys, respectively. Mouse movement,
@@ -101,7 +101,7 @@ enum dilemma_keymap_layers {
 /**
  * \brief Media layer
  *
- * Tertiary right-hand layer is media control, with volume up / volume down and
+ * Tertiary left-hand layer is media control, with volume up / volume down and
  * next / prev mirroring the navigation keys. Pause, stop and mute are on the
  * primary, secondary, and tertiary thumbs, respectively.
  *
@@ -123,7 +123,7 @@ enum dilemma_keymap_layers {
 /**
  * \brief Numeral layout.
  *
- * Primary left-hand layer (right home thumb) is numerals and symbols. Numerals
+ * Primary right-hand layer (right home thumb) is numerals and symbols. Numerals
  * are in the standard numpad locations with symbols in the remaining positions.
  */
 #define LAYOUT_LAYER_NUMERAL                                                                  \
@@ -135,7 +135,7 @@ enum dilemma_keymap_layers {
 /**
  * \brief Symbols layer.
  *
- * Secondary left-hand layer has shifted symbols in the same locations to reduce
+ * Secondary right-hand layer has shifted symbols in the same locations to reduce
  * chording when using mods with shifted symbols. `KC_LPRN` is duplicated next to
  * `KC_RPRN`.
  */
@@ -148,10 +148,10 @@ enum dilemma_keymap_layers {
 /**
  * \brief Function layer.
  *
- * Secondary right-hand layer has function keys mirroring the numerals on the
- * primary layer with extras on the pinkie column, plus system keys on the inner
- * column. App is on the tertiary thumb key and other thumb keys are duplicated
- * from the base layer to enable auto-repeat.
+ * Tertiary right-hand layer has function keys mirroring the numerals on the
+ * primary layer with system keys on the inner column. App is on the tertiary
+ * thumb key and other thumb keys are duplicated from the base layer to enable
+ * auto-repeat.
  */
 #define LAYOUT_LAYER_FUNCTION                                                                 \
      KC_F12,   KC_F7,   KC_F8,   KC_F9, KC_PSCR, _______________DEAD_HALF_ROW_______________, \
