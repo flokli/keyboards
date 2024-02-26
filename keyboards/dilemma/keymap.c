@@ -77,10 +77,10 @@ enum dilemma_keymap_layers {
  * auto-repeat.
 */
 #define LAYOUT_LAYER_NAVIGATION                                                               \
-    _______________DEAD_HALF_ROW_______________, KC_AGAIN,KC_PSTE, KC_COPY,  KC_CUT, KC_UNDO, \
-    ______________HOME_ROW_GACS_L______________, KC_CAPS, KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, \
-    _______________DEAD_HALF_ROW_______________,  KC_INS, KC_HOME, KC_PGDN, KC_PGUP,  KC_END, \
-                      XXXXXXX, _______, XXXXXXX,  KC_ENT, KC_BSPC, KC_DEL
+    _______________DEAD_HALF_ROW_______________, KC_AGAIN,LCTL(KC_V), LCTL(KC_C),  KC_CUT, KC_UNDO, \
+    ______________HOME_ROW_GACS_L______________, KC_CAPS, KC_LEFT,    KC_DOWN,   KC_UP, KC_RGHT, \
+    _______________DEAD_HALF_ROW_______________,  KC_INS, KC_HOME,    KC_PGDN, KC_PGUP,  KC_END, \
+                      XXXXXXX, _______, XXXXXXX,  KC_ENT, KC_BSPC,    KC_DEL
 
 /**
  * \brief Mouse layer
