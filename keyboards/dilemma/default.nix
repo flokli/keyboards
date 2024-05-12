@@ -4,8 +4,8 @@ rec {
   qmk_firmware_src = pkgs.fetchFromGitHub {
     owner = "qmk";
     repo = "qmk_firmware";
-    rev = "728aa576b0cd65c6fb7cf77132fdcd06fcedb643"; # develop branch
-    hash = "sha256-YmdX8nEsB1R8d265HAmvwejPjEHJdoTnm4QNigzrcyw=";
+    rev = "0.24.8";
+    hash = "sha256-DRHPfJXF1KF1+EwkbeGhqhVrpfp21JY2spOZxesZFbA=";
     fetchSubmodules = true;
   };
 
