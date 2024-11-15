@@ -28,7 +28,7 @@ manifest:
           - trusted-firmware-m
     - name: zmk
       remote: zmkfirmware
-      revision: 7f1ee320ab638245bbdae9b1cda5d5c50e2cb16e  # main
+      revision: refs/pull/2477/head  # mouse move and scroll support PR
       import: app/west.yml
   self:
     path: config

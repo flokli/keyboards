@@ -4,8 +4,12 @@ rec {
     name = "nice_nano_v2";
     board = "nice_nano_v2";
     shield = "corne_%PART% nice_view_adapter nice_view";
-    zephyrDepsHash = "sha256-D5CAlrO/E6DPbtUJyh/ec8ACpo1XM1jx2gLS2TpklBQ=";
+    zephyrDepsHash = "sha256-Qe9G5YLEi9iG5QdmJCxcmQTpzUCBYkfa84zk7SVRSgQ=";
     src = depot.users.flokli.keyboards.miryoku_config;
+    extraCmakeFlags = [
+      "-DCONFIG_ZMK_MOUSE=y"
+      "-DCONFIG_ZMK_MOUSE_SMOOTH_SCROLLING=y"
+    ];
   };
 
   config-flat = depot.users.flokli.keyboards.mkFlatConfig "corne";

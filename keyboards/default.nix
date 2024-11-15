@@ -5,8 +5,8 @@ let
   zmk-nix = pkgs.fetchFromGitHub {
     owner = "lilyinstarlight";
     repo = "zmk-nix";
-    rev = "d72e94ab94b2bceb60a29a2a8c2e1d304a4e922e";
-    hash = "sha256-3WXPPBJ2u8rMxejPhUahSiqOBr1BOfTgDa7oQDPtw54=";
+    rev = "1d7d7aeef7c62d3a80a688b26c6484123c26cde6";
+    hash = "sha256-7W+slivoV0zSfDxXlhMVL3yPodrhCiYQiFbtbco1r5U=";
   };
 
   zmk_builders = pkgs.callPackage (import (zmk-nix + "/nix/builders.nix")) { };
@@ -14,8 +14,8 @@ let
   miryoku_zmk = pkgs.fetchFromGitHub {
     owner = "manna-harbour";
     repo = "miryoku_zmk";
-    rev = "e6683e9f8b6c199b339208b1b501e88a7308ed48";
-    hash = "sha256-GjTbAoyhr557Tn4JaWsA3Po5KxMsQXrpKc9H+PU3T8A=";
+    rev = "a1f1eae0666b7b33ad789b10822297169754a349";
+    hash = "sha256-4jYz5fudTW45hbwhRRGBdiAbu596X9zSiCio/tS85d0=";
   };
 
   miryoku_zmk_patched = pkgs.runCommand "miryoku_zmk_patched" { } ''
@@ -25,6 +25,7 @@ let
     chmod -R +w $out
     patch -p1 < ${./0001-miryoku_layer_alternatives.h-expose-alt-gr-on-G-and-.patch}
     patch -p1 < ${./0001-miryoku_behaviors-add-quick-tap-ms-require-prior-idl.patch}
+    patch -p1 < ${./0001-custom_config-define-MIRYOKU_KLUDGE_MOUSEKEYSPR.patch}
   '';
 
   miryoku_config = pkgs.runCommand "config" { } ''
