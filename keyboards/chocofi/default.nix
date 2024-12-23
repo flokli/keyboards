@@ -4,11 +4,11 @@ rec {
     name = "nice_nano_v2";
     board = "nice_nano_v2";
     shield = "corne_%PART% nice_view_adapter nice_view";
-    zephyrDepsHash = "sha256-Qe9G5YLEi9iG5QdmJCxcmQTpzUCBYkfa84zk7SVRSgQ=";
+    zephyrDepsHash = "sha256:1hr304xhj596a85mmy3zl2y0bl9w143h9bj5qk7wmqx46mbs4kb0";
     src = depot.users.flokli.keyboards.miryoku_config;
     extraCmakeFlags = [
-      "-DCONFIG_ZMK_MOUSE=y"
-      "-DCONFIG_ZMK_MOUSE_SMOOTH_SCROLLING=y"
+      "-DCONFIG_ZMK_POINTING=y"
+      "-DCONFIG_ZMK_POINTING_SMOOTH_SCROLLING=y"
     ];
   };
 
