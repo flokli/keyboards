@@ -6,8 +6,8 @@ rec {
     zephyrDepsHash = "sha256-YE2iVzWk48rPxEWuBAcJPNEFvKB/+FoLUiYVCTsBI8M=";
     src = root.keyboards.miryoku_config;
     extraCmakeFlags = [
-      "-DCONFIG_ZMK_MOUSE=y"
-      "-DCONFIG_ZMK_MOUSE_SMOOTH_SCROLLING=y"
+      "-DCONFIG_ZMK_POINTING=y"
+      "-DCONFIG_ZMK_POINTING_SMOOTH_SCROLLING=y"
     ];
   };
 
