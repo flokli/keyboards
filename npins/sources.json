@@ -1,0 +1,23 @@
+{
+  "pins": {
+    "kit": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "tvlfyi",
+        "repo": "kit"
+      },
+      "branch": "canon",
+      "revision": "cb28ed70107f9fbb499afe327d52fc9b324685b5",
+      "url": "https://github.com/tvlfyi/kit/archive/cb28ed70107f9fbb499afe327d52fc9b324685b5.tar.gz",
+      "hash": "1zdmw1rbma3gqbcgxy8srx87iai79zhp1qxp1wgk33qv5x712fy9"
+    },
+    "nixpkgs": {
+      "type": "Channel",
+      "name": "nixpkgs-unstable",
+      "url": "https://releases.nixos.org/nixpkgs/nixpkgs-25.05pre771750.0740f6f23876/nixexprs.tar.xz",
+      "hash": "0yz1s4bmv4f1q5clphilq3aghx5a46wil1c20ggq6qpxv075rdw5"
+    }
+  },
+  "version": 3
+}
