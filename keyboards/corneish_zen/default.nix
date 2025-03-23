@@ -3,7 +3,7 @@ rec {
   firmware = root.keyboards.buildSplitKeyboard {
     name = "corneish_zen_v1";
     board = "corneish_zen_v1_%PART%";
-    zephyrDepsHash = "sha256-Qe9G5YLEi9iG5QdmJCxcmQTpzUCBYkfa84zk7SVRSgQ=";
+    zephyrDepsHash = "sha256-YE2iVzWk48rPxEWuBAcJPNEFvKB/+FoLUiYVCTsBI8M=";
     src = root.keyboards.miryoku_config;
     extraCmakeFlags = [
       "-DCONFIG_ZMK_MOUSE=y"
