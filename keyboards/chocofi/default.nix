@@ -1,18 +1,18 @@
-{ pkgs, depot, ... }:
+{ pkgs, root, ... }:
 rec {
-  firmware = depot.users.flokli.keyboards.buildSplitKeyboard {
+  firmware = root.keyboards.buildSplitKeyboard {
     name = "nice_nano_v2";
     board = "nice_nano_v2";
     shield = "corne_%PART% nice_view_adapter nice_view";
     zephyrDepsHash = "sha256:1hr304xhj596a85mmy3zl2y0bl9w143h9bj5qk7wmqx46mbs4kb0";
-    src = depot.users.flokli.keyboards.miryoku_config;
+    src = root.keyboards.miryoku_config;
     extraCmakeFlags = [
       "-DCONFIG_ZMK_POINTING=y"
       "-DCONFIG_ZMK_POINTING_SMOOTH_SCROLLING=y"
     ];
   };
 
-  config-flat = depot.users.flokli.keyboards.mkFlatConfig "corne";
+  config-flat = root.keyboards.mkFlatConfig "corne";
 
   flash-left = pkgs.writeShellScript "flash.sh" ''
     cp ${firmware}/zmk_left.uf2 /run/media/$USER/NICENANO/
