@@ -1,0 +1,27 @@
+name: "Build"
+on:
+  pull_request:
+  push:
+jobs:
+  build:
+    strategy:
+      fail-fast: false # build logs for each target
+      matrix:
+        attrpath:
+          - keyboards.chocofi.firmware
+          - keyboards.corneish_zen.firmware
+          - keyboards.dilemma.firmware
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: cachix/install-nix-action@v31
+    - uses: DeterminateSystems/magic-nix-cache-action@main
+    - run: |
+        nix-build -A ${{ matrix.attrpath}}
+        mkdir -p out
+        cp -r result/* out
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: result-${{ matrix.attrpath}}
+        path: out
