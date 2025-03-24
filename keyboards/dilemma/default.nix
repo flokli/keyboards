@@ -2,10 +2,10 @@
 
 rec {
   qmk_firmware_src = pkgs.fetchFromGitHub {
-    owner = "bastardkb";
-    repo = "bastardkb-qmk";
-    rev = "60f5e5ae3da7cbc724a587642b2ad36fe5fcb591"; # bkb-develop
-    hash = "sha256-FRlxOdxxNAf7QYlAnD4OJ68k04oog0r9UYBmaANDFsU=";
+    owner = "george-norton";
+    repo = "qmk_firmware";
+    rev = "a2867f0449b136c41c7792584de4dfea8da90849"; # multitouch_experiment
+    hash = "sha256-dL9icAKBnKwW7DHuz3bPZDQvNVAHyWrmc2abBvIHaY4=";
     fetchSubmodules = true;
   };
 
@@ -22,7 +22,7 @@ rec {
 
     src = qmk_firmware_src;
 
-    patches = [ ./enable-taps.patch ];
+    # patches = [ ./enable-taps.patch ];
 
     postPatch = ''
       patchShebangs util/uf2conv.py
