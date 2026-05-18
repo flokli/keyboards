@@ -4,8 +4,8 @@ rec {
   qmk_firmware_src = pkgs.fetchFromGitHub {
     owner = "george-norton";
     repo = "qmk_firmware";
-    rev = "6a0f25033ebb7f901eb03dad2d598f949d424ea0"; # multitouch_experiment
-    hash = "sha256-yCU3+BADqqiL6/sHk1tlEbXrG5Z2Mqb/wBhb9rXSvxQ=";
+    rev = "ac70426f259b416edb28256eeaf540db265e081c"; # multitouch_experiment
+    hash = "sha256-GAJRGesbr8b450h1Z2J0G9rD/w0AxSJRqAjNuiGJdlw=";
     fetchSubmodules = true;
   };
 
@@ -22,10 +22,11 @@ rec {
 
     src = qmk_firmware_src;
 
-    patches = [ ./enable-taps.patch ];
+    # patches = [ ./enable-taps.patch ];
 
     postPatch = ''
       patchShebangs util/uf2conv.py
+      echo "#define CIRQUE_PINNACLE_TAP_ENABLE 1" >> keyboards/bastardkb/dilemma/3x5_3/config.h
     '';
 
     nativeBuildInputs = [
