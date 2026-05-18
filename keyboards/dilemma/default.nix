@@ -43,13 +43,10 @@ rec {
       cp -r ${qmk_userspace}/. /tmp/qmk_userspace/
       chmod +w /tmp/qmk_userspace/ --recursive
 
-      mkdir -p /tmp/qmk_userspace/keyboards/bastardkb/dilemma/3x5_3{,_procyon}/keymaps/flokli
-      cp ${./keymap.c} /tmp/qmk_userspace/keyboards/bastardkb/dilemma/3x5_3/keymaps/flokli/keymap.c
-      cp ${./rules.mk} /tmp/qmk_userspace/keyboards/bastardkb/dilemma/3x5_3/keymaps/flokli/rules.mk
+      mkdir -p /tmp/qmk_userspace/keyboards/bastardkb/dilemma/3x5_3_procyon/keymaps/flokli
       cp ${./keymap.c} /tmp/qmk_userspace/keyboards/bastardkb/dilemma/3x5_3_procyon/keymaps/flokli/keymap.c
       cp ${./rules.mk} /tmp/qmk_userspace/keyboards/bastardkb/dilemma/3x5_3_procyon/keymaps/flokli/rules.mk
 
-      qmk compile -c -kb bastardkb/dilemma/3x5_3 -km flokli
       qmk compile -c -kb bastardkb/dilemma/3x5_3_procyon -km flokli
     '';
 
